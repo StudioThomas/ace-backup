@@ -2,7 +2,7 @@
 
 Dockerized, automated, remote backup utility for ACE projects
 
-### Run container with required permissions
+### Run container with required permissions for mounting sshfs volume
 
     docker run \
       -d \
@@ -12,6 +12,16 @@ Dockerized, automated, remote backup utility for ACE projects
       --cap-add SYS_ADMIN --device=/dev/fuse --security-opt apparmor:unconfined \
       studiothomas/ace-backup
 
+### Run container with local volume
+
+    docker run \
+      -d \
+      -it \
+      --name ace-backup \
+      --env-file=.env \
+      -v /vol:/mnt/assist \
+      studiothomas/ace-backup
+
 ### Example .env file
 
     AWS_ACCESS_KEY_ID=
@@ -19,10 +29,10 @@ Dockerized, automated, remote backup utility for ACE projects
     AWS_DEFAULT_REGION=eu-west-1
     AWS_BUCKET=
 
-    ASSIST_USERNAME=
-    ASSIST_PASSWORD=
-    ASSIST_HOST=
-    ASSIST_DIR=/mnt/vol1
+    # Optional
+    ASSIST_REMOTE_USERNAME=
+    ASSIST_REMOTE_PASSWORD=
+    ASSIST_REMOTE_HOST=
 
     COUCH_URL=
 
