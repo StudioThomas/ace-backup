@@ -1,6 +1,6 @@
 # ace-backup
 
-Automated remote backup utility for ACE projects
+Dockerized, automated, remote backup utility for ACE projects
 
 ### Run container with required permissions
 
@@ -17,8 +17,17 @@ Automated remote backup utility for ACE projects
     AWS_ACCESS_KEY_ID=
     AWS_SECRET_ACCESS_KEY=
     AWS_DEFAULT_REGION=eu-west-1
+    AWS_BUCKET=
 
     ASSIST_USERNAME=
     ASSIST_PASSWORD=
     ASSIST_HOST=
     ASSIST_DIR=/mnt/vol1
+
+    COUCH_URL=
+
+### Required settings on remote for mounting sshfs volume in docker
+
+    # /etc/ssh/sshd_config
+    PermitRootLogin yes
+    PasswordAuthentication yes
