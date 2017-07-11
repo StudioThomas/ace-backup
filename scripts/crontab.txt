@@ -1,1 +1,1 @@
-$BACKUP_MINUTE $BACKUP_HOUR * * * root . /root/env.sh; /scripts/backup.sh >> /dev/console 2>&1
+$BACKUP_MINUTE $BACKUP_HOUR * * * root . /root/env.sh; /scripts/backup.sh

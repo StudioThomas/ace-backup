@@ -2,7 +2,7 @@
 
 log() {
   echo "$(date -u -Iseconds) $@"
-  # echo "$(date -u -Iseconds) $@" > /dev/console
+  echo "$(date -u -Iseconds) $@" > /dev/console
 }
 
 if [ -n "$ASSIST_REMOTE_HOST" ]; then

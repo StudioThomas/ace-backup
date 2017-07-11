@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Export all environment vars to use in cron
-env | sed 's/^\(.*\)$/export \1/g' > /root/env.sh
-
+env | sed 's/^\([a-z_]*\)=\(.*\)$//g'| sed 's/^\(.*\)=\(.*\)$/export \1=\2/g' > /root/env.sh
 chmod +x /root/env.sh
 
 # Replace vars in crontab

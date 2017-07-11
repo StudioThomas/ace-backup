@@ -2,7 +2,7 @@
 
 log() {
   echo "$(date -u -Iseconds) $@"
-  # echo "$(date -u -Iseconds) $@" > /dev/console
+  echo "$(date -u -Iseconds) $@" > /dev/console
 }
 
 DATESTAMP=`date +%y-%m-%d`
