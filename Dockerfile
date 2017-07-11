@@ -42,11 +42,6 @@ RUN mkdir /mnt/assist
 # Make couch backup dir
 RUN mkdir /couch
 
-# Add crontab
-COPY /scripts/crontab.txt /var/crontab.txt
-RUN crontab /var/crontab.txt
-RUN chmod 600 /etc/crontab
-
 WORKDIR /mnt/assist
 
-CMD ["/usr/bin/supervisord"]
+CMD /scripts/cron.sh && /usr/bin/supervisord

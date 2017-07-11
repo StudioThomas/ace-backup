@@ -36,6 +36,9 @@ Dockerized, automated, remote backup utility for ACE projects
 
     COUCH_URL=
 
+    BACKUP_MINUTE=0
+    BACKUP_HOUR=0
+
 ### Required settings on remote for mounting sshfs volume in docker
 
     # /etc/ssh/sshd_config
