@@ -12,6 +12,7 @@ RUN apt-get install -y \
     supervisor \
     sshfs \
     cron \
+    gettext \
     jq \
     less \
     man \

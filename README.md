@@ -44,3 +44,8 @@ Dockerized, automated, remote backup utility for ACE projects
     # /etc/ssh/sshd_config
     PermitRootLogin yes
     PasswordAuthentication yes
+
+### Useful
+
+    # ssh into running container
+    $ docker exec -it ace-backup bash
