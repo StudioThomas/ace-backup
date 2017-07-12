@@ -5,10 +5,9 @@ log() {
   echo "$(date -u -Iseconds) $@" > /dev/console
 }
 
-log "backup initialised $BACKUP_HOUR:$BACKUP_MINUTE"
+log "backup initialised"
 
-. /scripts/assist.sh
-
-. /scripts/couch.sh
+. /root/env.sh; /scripts/assist.sh
+. /root/env.sh; /scripts/couch.sh
 
 log "backup complete"

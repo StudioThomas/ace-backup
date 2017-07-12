@@ -41,8 +41,8 @@ RUN chmod -R +x /scripts
 RUN mkdir /mnt/assist
 
 # Make couch backup dir
-RUN mkdir /couch
+RUN mkdir /root/couch
 
 WORKDIR /mnt/assist
 
-CMD /scripts/cron.sh && /usr/bin/supervisord
+CMD /scripts/init.sh && /usr/bin/supervisord
