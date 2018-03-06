@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Export all environment vars
-# env | sed 's/^\(.*\)$/export \1/g' > /root/envs.sh
 env | sed 's/^\([a-z_]*\)=\(.*\)$//g'| sed 's/^\(.*\)=\(.*\)$/export \1=\2/g' > /root/env.sh
 chmod +x /root/env.sh
 

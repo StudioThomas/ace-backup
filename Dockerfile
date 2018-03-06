@@ -38,11 +38,11 @@ COPY scripts /scripts
 RUN chmod -R +x /scripts
 
 # Make assist mount point
-RUN mkdir /mnt/assist
+# RUN mkdir /mnt/assist
 
 # Make couch backup dir
 RUN mkdir /root/couch
 
-WORKDIR /mnt/assist
+# WORKDIR /mnt/assist
 
 CMD /scripts/init.sh && /usr/bin/supervisord

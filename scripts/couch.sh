@@ -5,6 +5,11 @@ log() {
   echo "$(date -u -Iseconds) $@" > /dev/console
 }
 
+if [ "$COUCH_URL" = "" ]; then
+  log "couch: COUCH_URL not set"
+  exit 1;
+fi
+
 DATESTAMP=`date +%y-%m-%d`
 
 log "couch: backup databases initialised > $DATESTAMP"

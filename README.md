@@ -26,14 +26,18 @@ Dockerized, automated, remote backup utility for ACE projects
 
     AWS_ACCESS_KEY_ID=
     AWS_SECRET_ACCESS_KEY=
-    AWS_DEFAULT_REGION=eu-west-1
+    AWS_DEFAULT_REGION=
     AWS_BUCKET=
 
-    # Optional
+    # required for assist backup
+    ASSIST_VOLUME=/mnt/assist
+
+    # optional
     ASSIST_REMOTE_USERNAME=
     ASSIST_REMOTE_PASSWORD=
     ASSIST_REMOTE_HOST=
 
+    # required for couch backup
     COUCH_URL=
 
     BACKUP_MINUTE=0
@@ -46,6 +50,9 @@ Dockerized, automated, remote backup utility for ACE projects
     PasswordAuthentication yes
 
 ### Useful
+
+    # build image
+    $ docker build -t studiothomas/ace-backup .
 
     # ssh into running container
     $ docker exec -it ace-backup bash
