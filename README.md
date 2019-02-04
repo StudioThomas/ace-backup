@@ -10,7 +10,7 @@ Dockerized, automated, remote backup utility for ACE projects
       --name ace-backup \
       --env-file=.env \
       --cap-add SYS_ADMIN --device=/dev/fuse --security-opt apparmor:unconfined \
-      studiothomas/ace-backup
+      homerjam/ace-backup
 
 ### Run container with local volume
 
@@ -20,7 +20,7 @@ Dockerized, automated, remote backup utility for ACE projects
       --name ace-backup \
       --env-file=.env \
       -v /vol:/mnt/assist \
-      studiothomas/ace-backup
+      homerjam/ace-backup
 
 ### Example .env file
 
@@ -52,7 +52,7 @@ Dockerized, automated, remote backup utility for ACE projects
 ### Useful
 
     # build image
-    $ docker build -t studiothomas/ace-backup .
+    $ docker build -t homerjam/ace-backup .
 
     # ssh into running container
     $ docker exec -it ace-backup bash
